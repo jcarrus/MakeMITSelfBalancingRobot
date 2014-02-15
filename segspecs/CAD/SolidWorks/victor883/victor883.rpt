@@ -1,0 +1,66 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : victor883.iam
+Receiving System Product I.D.: victor883.iam
+File Name                    : C:\Documents and Settings\Administrator\Desktop\Transfer Temp\victor883.igs
+Sending System               : AutoDesk Inventor R2.0 
+Preprocessor Version         : AutoDesk Inventor Iges Exporter R2.0
+File Creation Date           : 20020121.154048
+Model Creation Date          : 
+Units                        : IN
+Model Space Scale            : 1
+Author                       : No Author specified
+Organization                 : No Organization specified
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:               4
+  Highest number of significant digits:                     14
+  Average number of significant digits:                8.35862
+  Maximum distance to origin:                          3.70354
+  Minimum distance to origin:                          2.49827
+  Effective number of significant digits:              13.2886
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+100  Arc                                            366       366
+104  Conic arc                                       60        60
+110  Line                                           716       716
+120  Surface of revolution                           78        78
+124  Transformation matrix                          113       113
+128  Rational B-spline surface                      127       127
+141  Boundary                                       228       228
+143  Bounded surface                                205       205
+308  Subfigure definition                            16        16
+408  Singular subfigure instance                     16        16
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       16
+Surface feature(s)                     0
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Saturday, June 16, 2007 23:26:58
+Finish time: Saturday, June 16, 2007 23:27:10
+Processing time: 0 days, 00 hours, 00 mins, 12 secs

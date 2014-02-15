@@ -1,0 +1,10 @@
+bin\Debug\SegwayDash.exe
+bin\Debug\SegwayDash.pdb
+bin\Debug\SegwayDash.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SegwayDash.Form1.resources
+obj\Debug\SegwayDash.Resources.resources
+obj\Debug\SegwayDash.vbproj.GenerateResource.Cache
+obj\Debug\SegwayDash.exe
+obj\Debug\SegwayDash.xml
+obj\Debug\SegwayDash.pdb
