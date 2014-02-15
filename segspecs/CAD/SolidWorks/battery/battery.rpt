@@ -1,0 +1,68 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : battery.ipt
+Receiving System Product I.D.: battery.ipt
+File Name                    : No Iges File Name specified
+Sending System               : AutoDesk Inventor R5.0
+Preprocessor Version         : AutoDesk Inventor Iges Exporter R5.0
+File Creation Date           : 20020113.092546
+Model Creation Date          : 
+Units                        : IN
+Model Space Scale            : 1
+Author                       : No Author specified
+Organization                 : No Organization specified
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:              14
+  Highest number of significant digits:                     14
+  Average number of significant digits:                9.73996
+  Maximum distance to origin:                           9.8685
+  Minimum distance to origin:                                0
+  Effective number of significant digits:                   14
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+100  Arc                                            168       168
+104  Conic arc                                        8         8
+110  Line                                           530       530
+116  Point                                           54        54
+120  Surface of revolution                           47        47
+123  Direction                                      108       108
+124  Transformation matrix                           93        93
+128  Rational B-spline surface                       24        24
+141  Boundary                                       138       138
+143  Bounded surface                                125       125
+190  Plane surface entity                            54        54
+314  Color definition                                 1         1
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       1
+Surface feature(s)                     0
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Thursday, June 21, 2007 19:55:34
+Finish time: Thursday, June 21, 2007 19:55:37
+Processing time: 0 days, 00 hours, 00 mins, 03 secs

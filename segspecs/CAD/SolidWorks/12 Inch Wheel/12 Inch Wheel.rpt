@@ -1,0 +1,70 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : 12 Inch Wheel.iam
+Receiving System Product I.D.: 12 Inch Wheel.iam
+File Name                    : No Iges File Name specified
+Sending System               : AutoDesk Inventor R5.0
+Preprocessor Version         : AutoDesk Inventor Iges Exporter R5.0
+File Creation Date           : 20040117.131433
+Model Creation Date          : 
+Units                        : IN
+Model Space Scale            : 1
+Author                       : No Author specified
+Organization                 : No Organization specified
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:              14
+  Highest number of significant digits:                     14
+  Average number of significant digits:                9.15789
+  Maximum distance to origin:                          4.57768
+  Minimum distance to origin:                                0
+  Effective number of significant digits:                   14
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+100  Arc                                            490       490
+110  Line                                           418       418
+116  Point                                           41        41
+120  Surface of revolution                           87        87
+123  Direction                                       82        82
+124  Transformation matrix                          233       233
+126  Rational B-spline curve                        264       264
+128  Rational B-spline surface                      105       105
+141  Boundary                                       288       288
+143  Bounded surface                                233       233
+190  Plane surface entity                            41        41
+308  Subfigure definition                             3         3
+314  Color definition                                 2         2
+408  Singular subfigure instance                      3         3
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       3
+Surface feature(s)                     0
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Thursday, June 21, 2007 19:48:35
+Finish time: Thursday, June 21, 2007 19:48:58
+Processing time: 0 days, 00 hours, 00 mins, 23 secs

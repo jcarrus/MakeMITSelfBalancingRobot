@@ -1,0 +1,63 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : 8020-1010.ipt
+Receiving System Product I.D.: 8020-1010.ipt
+File Name                    : C:\Documents and Settings\Administrator\Desktop\Transfer Temp\8020-1010.igs
+Sending System               : AutoDesk Inventor R2.0 
+Preprocessor Version         : AutoDesk Inventor Iges Exporter R2.0
+File Creation Date           : 20011227.204113
+Model Creation Date          : 
+Units                        : IN
+Model Space Scale            : 1
+Author                       : No Author specified
+Organization                 : No Organization specified
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:              14
+  Highest number of significant digits:                     14
+  Average number of significant digits:                10.6339
+  Maximum distance to origin:                          1.39352
+  Minimum distance to origin:                        0.0087204
+  Effective number of significant digits:              13.9946
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+100  Arc                                            216       216
+110  Line                                           480       480
+120  Surface of revolution                           54        54
+124  Transformation matrix                          135       135
+128  Rational B-spline surface                       46        46
+141  Boundary                                       102       102
+143  Bounded surface                                100       100
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       1
+Surface feature(s)                     0
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Saturday, June 30, 2007 18:15:02
+Finish time: Saturday, June 30, 2007 18:15:07
+Processing time: 0 days, 00 hours, 00 mins, 05 secs
