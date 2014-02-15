@@ -8,11 +8,29 @@ Scale the Output
 */
 #include <Servo.h>
 
+/*
 //Motors
 #define Motor_A_Dir_Pin  4
 #define Motor_A_Drive_Pin  5
 #define Motor_B_Dir_Pin  4
 #define Motor_B_Drive_Pin  5
+*/
+
+// Clockwise and counter-clockwise definitions.
+// Depending on how you wired your motors, you may need to swap.
+#define CW  0
+#define CCW 1
+
+// Motor definitions to make life easier:
+#define MOTOR_A 0
+#define MOTOR_B 1
+
+// Pin Assignments //
+// Don't change these! These pins are statically defined by shield layout
+const byte PWMA = 3;  // PWM control (speed) for motor A
+const byte PWMB = 11; // PWM control (speed) for motor B
+const byte DIRA = 12; // Direction control for motor A
+const byte DIRB = 13; // Direction control for motor B
 
 //Serial Comm
 #define DATABUFFERSIZE      10
@@ -49,11 +67,7 @@ void setup()
   {
   Serial.begin(57600); 
   
-  R_Servo.attach(R_ServoPin);
-  L_Servo.attach(L_ServoPin);
-  
-  R_Servo.write(SERVOCENTER);
-  L_Servo.write(SERVOCENTER);
+  setupArdumoto(); // Set all pins as outputs
   }
 
 boolean getSerialString()
@@ -146,10 +160,15 @@ void driveWithPID()
         
     Output = (int)(Pout + Iout + Dout);
     
-      if (Output > 200)
-        Output = 200;
-      if (Output < -200)
-        Output = -200;
+      if (Output > 255)
+        Output = 255;
+      if (Output < -255)
+        Output = -255;
+      
+      dir = CW;
+      if (Output < 0)
+        dir = CCW;
+        Output = Output * -1;      
         
     lastinput = Input;
     lasttime = now;
@@ -157,14 +176,14 @@ void driveWithPID()
     if (error == 0)
       {
       errorsum = 0;
-      L_Servo.write (SERVOCENTER);
-      R_Servo.write (SERVOCENTER);
+        stopArdumoto(MOTOR_A);  // STOP motor A 
+        stopArdumoto(MOTOR_B);  // STOP motor B 
       }
       
     else
       {
-      L_Servo.writeMicroseconds (1500 - Output);
-      R_Servo.writeMicroseconds (1500 + Output);
+      driveArdumoto(MOTOR_A, dir, 255);
+      driveArdumoto(MOTOR_B, dir, 255);
       }
     
     /*
@@ -212,6 +231,43 @@ void driveWithPID()
     }
   }
   
+// driveArdumoto drives 'motor' in 'dir' direction at 'spd' speed
+void driveArdumoto(byte motor, byte dir, byte spd)
+{
+  if (motor == MOTOR_A)
+  {
+    digitalWrite(DIRA, dir);
+    analogWrite(PWMA, spd);
+  }
+  else if (motor == MOTOR_B)
+  {
+    digitalWrite(DIRB, dir);
+    analogWrite(PWMB, spd);
+  }  
+}
+  
+// setupArdumoto initialize all pins
+void setupArdumoto()
+{
+  // All pins should be setup as outputs:
+  pinMode(PWMA, OUTPUT);
+  pinMode(PWMB, OUTPUT);
+  pinMode(DIRA, OUTPUT);
+  pinMode(DIRB, OUTPUT);
+  
+  // Initialize all pins as low:
+  digitalWrite(PWMA, LOW);
+  digitalWrite(PWMB, LOW);
+  digitalWrite(DIRA, LOW);
+  digitalWrite(DIRB, LOW);
+}
+
+// stopArdumoto makes a motor stop
+void stopArdumoto(byte motor)
+{
+  driveArdumoto(motor, 0, 0);
+}
+
 void loop() 
   {
    //Parse string to get angle as int
