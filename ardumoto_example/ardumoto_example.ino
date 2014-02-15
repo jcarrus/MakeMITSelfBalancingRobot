@@ -39,8 +39,8 @@ void setup()
 void loop()
 {
   // Drive motor A (and only motor A) at various speeds, then stop.
-  driveArdumoto(MOTOR_A, CCW, 255); // Set motor A to CCW at max
-  delay(1000);  // Motor A will spin as set for 1 second
+  driveArdumoto(MOTOR_B, CCW, 255); // Set motor A to CCW at max
+  /*delay(1000);  // Motor A will spin as set for 1 second
   driveArdumoto(MOTOR_A, CW, 127);  // Set motor A to CW at half
   delay(1000);  // Motor A will keep trucking for 1 second 
   stopArdumoto(MOTOR_A);  // STOP motor A 
@@ -58,7 +58,7 @@ void loop()
   delay(1000);  // Drive forward for a second
   // Now go backwards at half that speed:
   driveArdumoto(MOTOR_A, CCW, 127);  // Motor A at max speed.
-  driveArdumoto(MOTOR_B, CCW, 127);  // Motor B at max speed.
+  driveArdumoto(MOTOR_B, CCW, 127);  // Motor B at max speed.*/
 }
 
 // driveArdumoto drives 'motor' in 'dir' direction at 'spd' speed

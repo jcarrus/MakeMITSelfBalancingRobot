@@ -124,7 +124,7 @@ void setup ()
   println(Serial.list());
 
   // Open whatever port is the one you're using.
-  myPort = new Serial(this, "/dev/COM4", BAUDRATE);
+  myPort = new Serial(this, "/dev/tty.usbmodemfa141", BAUDRATE);
   myPort.clear();
   
   controlP5 = new ControlP5(this);                                  
