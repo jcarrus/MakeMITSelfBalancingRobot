@@ -105,7 +105,11 @@ return false;
 
 void getAngleMeasure()
   {
+<<<<<<< HEAD
     char delimiters[] = ","; 
+=======
+    char delimiters[] = " ,"; 
+>>>>>>> cb18d3eb8a234549ce9146df271031d9778a6fcb
     char* valPosition;  
  
     valPosition = strtok(dataBuffer, delimiters);
