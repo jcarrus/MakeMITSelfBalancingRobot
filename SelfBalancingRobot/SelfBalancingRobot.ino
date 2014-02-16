@@ -58,7 +58,7 @@ float Derror;
 void setup() {
   Serial.begin(57600); // Begins talk to the sensor
   setupArdumoto(); // Set all pins as outputs
-  bool lp = true;
+  boolean lp = true;
   while (lp) {
     if(getSerialString()) {
       calibAngle = getAngleMeasure();
@@ -105,7 +105,7 @@ boolean getSerialString() {
   return false;  
 }  
 
-void getAngleMeasure() {
+int getAngleMeasure() {
   char delimiters[] = ",";
   char* valPosition;  
  
@@ -120,6 +120,7 @@ void getAngleMeasure() {
   else {
     angle = calibAngle; //in case of garbage data
   }
+  return angle;
 }
   
 void driveWithPID() {
@@ -127,8 +128,8 @@ void driveWithPID() {
   timechange = (now - lasttime);
   
   if (timechange >= settime) {
-    Input = (angle / scale); 
-    error = (Setpoint / scale) - Input;
+    Input = (angle); 
+    error = (Setpoint) - Input;
     errorsum = errorsum + error;
     Derror = Input - lastinput;
     Pout = Kp * error;
@@ -166,20 +167,51 @@ void driveWithPID() {
       driveArdumoto(MOTOR_A, dir, Output);
       driveArdumoto(MOTOR_B, dir, Output);
     }
-      
+    
+    /*
     Serial.print("Angle Measure: ");
     Serial.print(angle);
     Serial.print(". Drive Direction: ");
     Serial.print(dir);
     Serial.print(". Drive Amount: ");
     Serial.println(Output);
+    */
+    
+
+// Print values
+// Keep this format to use in processing (i.e. comment lines 4,5,8,11,14,15,16,17,20,23)
+Serial.print ("angle"); //line 1
+Serial.print (":");
+Serial.print (Input);
+//Serial.print (",");
+//Serial.print ("error : ");
+Serial.print (error);
+Serial.print (", ");
+//Serial.print ("errorsum : ");
+Serial.print (errorsum);
+Serial.print (",");
+//Serial.print ("Pout : ");
+Serial.print (Pout);
+Serial.print (", ");
+//Serial.print ("Derror : ");
+//Serial.print (Derror);
+//Serial.print (", ");
+//Serial.print ("Iout : ");
+Serial.print (Iout);
+Serial.print (", ");
+//Serial.print ("Dout : ");
+Serial.print (Dout);
+Serial.print (", ");
+//Serial.print ("Output : ");
+Serial.println (Output);
+
   }
 }
   
 // driveArdumoto drives 'motor' in 'dir' direction at 'spd' speed
 void driveArdumoto(byte motor, byte dir, byte spd) {
   if (motor == MOTOR_A) {
-    digitalWrite(DIRA, dir);
+    digitalWrite(DIRA, (dir + 1) % 2);
     analogWrite(PWMA, spd);
   }
   else if (motor == MOTOR_B) {
